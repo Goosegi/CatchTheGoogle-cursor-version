@@ -13,7 +13,7 @@ async function render (element) {
     const winIconConteiner = document.createElement('div');
     winIconConteiner.classList.add('modal-decoration');
     const winIcon = document.createElement('img');
-    winIcon.src = "assets/images/winnerIcon.svg"
+    winIcon.src = "/ui/assets/images/winnerIcon.svg"
     winIcon.alt = "icon"
     winIconConteiner.append(winIcon);
 

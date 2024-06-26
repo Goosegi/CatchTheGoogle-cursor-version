@@ -95,7 +95,7 @@ export async function start() {
 
         _notifySubscribers();
         if ( _state.settings.sound === true ) {
-            const clickSound = new Audio('assets/sounds/miss.mp3');
+            const clickSound = new Audio('/ui/assets/sounds/miss.mp3');
             clickSound.play();
             }
     }, _state.settings.googleJumpInterval)

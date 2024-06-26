@@ -16,7 +16,7 @@ async function render(element) {
     const loseIconContainer = document.createElement('div');
     loseIconContainer.classList.add('modal-decoration');
     const loseIcon = document.createElement('img');
-    loseIcon.src = "assets/images/lossIcon.svg";
+    loseIcon.src = "/ui/assets/images/lossIcon.svg";
 
     loseIconContainer.append(loseIcon);
 
