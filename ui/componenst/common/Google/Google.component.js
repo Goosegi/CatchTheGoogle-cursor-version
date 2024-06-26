@@ -8,9 +8,9 @@ export function GoogleComponent(x, y) {
 async function render(element) {
 
     const googlePosition = await getGooglePosition()
-    element.src = '/ui/assets/images/google.png';
+    element.src = './ui/assets/images/google.png';
 
-    const clickSound = new Audio('/ui/assets/sounds/catch.wav');
+    const clickSound = new Audio('./ui/assets/sounds/catch.wav');
     const soundOfCatch = await getSoundStatus()
 
     if (soundOfCatch === true) {
