@@ -1,4 +1,3 @@
-import { renderApp } from "../ui/index.js";
 import { GAME_STATUSES } from "./constants.js";
 
 const _state = {
