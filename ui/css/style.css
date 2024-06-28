@@ -27,7 +27,7 @@
 .line {
     display: flex;
     flex-direction: column;
-    flex: 0 1 350px;
+    flex: 0 1 300px;
 }
 
 label {
@@ -51,11 +51,6 @@ select {
 
 /* Toggle //======================================================================================================================================================== */
 
-.switch-button {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
 
 .main-button {
     align-self: center;
@@ -109,8 +104,66 @@ select {
 }
 
 /* Toggle //======================================================================================================================================================== */
+.switch-button {
+    display: flex;
+    position : relative;
+    font-size: inherit;
+    padding-bottom: 24px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-direction:column-reverse;
+    gap: 6px;
+  }
 
+  .switch-button input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
 
+  .switch-button input:checked ~ .checkbox__checkmark {
+    background-color: #66DC42;
+  }
+
+  .switch-button input:checked ~ .checkbox__checkmark:after {
+    left: 22px;
+  }
+  .switch-button:hover input ~ .checkbox__checkmark {
+    background-color: #eee;
+  }
+  .switch-button:hover input:checked ~ .checkbox__checkmark {
+    background-color: #66DC42;
+  }
+
+  .switch-button .checkbox__checkmark {
+    position: relative;
+    top: 1px;
+    left: 0;
+    height: 22px;
+    width: 40px;
+    background-color: #eee;
+    transition: background-color 0.25s ease;
+    border-radius: 11px;
+  }
+
+  .switch-button .checkbox__checkmark:after {
+    content: "";
+    position: relative;
+    left: 3px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.25s ease;
+    
+  }
 /* Result //======================================================================================================================================================== */
 
 .result-container {

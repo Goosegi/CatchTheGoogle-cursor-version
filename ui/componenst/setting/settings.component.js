@@ -147,16 +147,15 @@ pointsToLoseContainer.append(
 
 //================================================================
 
-const divSwitchButton = document.createElement('div');
+const divSwitchButton = document.createElement('label');
 divSwitchButton.classList.add('switch-button');
 
-const titleSound = document.createElement('label');
-titleSound.textContent = 'Sound:';
+const titleSound = document.createElement('div');
+titleSound.textContent = 'Sound';
 
 
 const checkboxSound = document.createElement('input');
 checkboxSound.type = 'checkbox';
-checkboxSound.classList.add('checkbox');
 checkboxSound.addEventListener('change', function() {
     if (checkboxSound.checked) {
     SoundStatus(true)
@@ -165,9 +164,14 @@ checkboxSound.addEventListener('change', function() {
     }
     });
 
+    const checkboxSoundCheckmark = document.createElement('div');
+    checkboxSoundCheckmark.classList.add('checkbox__checkmark')
+
+
     divSwitchButton.append(
-        titleSound,
         checkboxSound,
+        checkboxSoundCheckmark,
+        titleSound,
     );
 
 
