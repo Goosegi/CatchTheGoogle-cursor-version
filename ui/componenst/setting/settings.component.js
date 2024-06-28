@@ -13,8 +13,8 @@ let selectedPointsToWin;
 let selectedPointsToLose;
 async function render (element) {
 
-    const divLine1 = document.createElement('div');
-    divLine1.classList.add('line');
+    const gridSizeConteiner = document.createElement('div');
+    gridSizeConteiner.classList.add('line');
 
     const gridSizeLabel = document.createElement('label');
     gridSizeLabel.textContent = 'Grid Size:';
@@ -49,7 +49,7 @@ async function render (element) {
         SwitchGridSize(selectedGridSize);
     });
 
-    divLine1.append(
+    gridSizeConteiner.append(
         gridSizeLabel,
         gridSizeSelector
     );
@@ -57,8 +57,8 @@ async function render (element) {
     //==============================================================================
     //Select points to win
 
-    const divLine2 = document.createElement('div');
-    divLine2.classList.add('line');
+    const pointsToWinContainer = document.createElement('div');
+    pointsToWinContainer.classList.add('line');
 
     const pointsToWinLabel = document.createElement('label');
     pointsToWinLabel.textContent = 'Points To Win:';
@@ -94,7 +94,7 @@ async function render (element) {
         SwitchPointsToWin(selectedPointsToWin);
     });
 
-    divLine2.append(
+    pointsToWinContainer.append(
         pointsToWinLabel,
         pointsToWinSelector
     );
@@ -103,8 +103,8 @@ async function render (element) {
 // select points to lose
 
 
-const divLine3 = document.createElement('div');
-divLine3.classList.add('line');
+const pointsToLoseContainer = document.createElement('div');
+pointsToLoseContainer.classList.add('line');
 
 const pointsToLoseLabel = document.createElement('label');
 pointsToLoseLabel.textContent = 'Points To Lose:';
@@ -140,7 +140,7 @@ pointsToLoseSelector.addEventListener('change', function() {
     SwitchPointsToLose(selectedPointsToLose);
 });
 
-    divLine3.append(
+pointsToLoseContainer.append(
         pointsToLoseLabel,
         pointsToLoseSelector,
     )
@@ -172,9 +172,9 @@ checkboxSound.addEventListener('change', function() {
 
 
     element.append(
-        divLine1,
-        divLine2,
-        divLine3,
+        gridSizeConteiner,
+        pointsToWinContainer,
+        pointsToLoseContainer,
         divSwitchButton,
     )
 
